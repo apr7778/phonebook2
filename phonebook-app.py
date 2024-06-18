@@ -117,9 +117,9 @@ def find_records():
     if request.method == 'POST':
         keyword = request.form['username']
         persons_app = find_persons(keyword) 
-        return render_template('index.html', persons_html=persons_app, keyword=keyword, show_result=True, developer_name='Vincenzo')
+        return render_template('index.html', persons=persons_app, keyword=keyword, show_result=True, developer_name='Vincenzo')
     else:
-        return render_template('index.html', show_result=False, developer_name='Vincenzo')
+        return render_template('index.html', show_result=False, developer_name='Andy')
 
 
 # Write a function named `add_record` which inserts new record to the database using `GET` and `POST` methods,
